@@ -1,0 +1,1 @@
+function e(){let e=document.getElementById("modo").value,d=document.getElementById("cesar_desp");d.style.display="cesar"===e?"block":"none"}window.addEventListener("load",(()=>{e(),document.getElementById("modo").addEventListener("change",e)}));

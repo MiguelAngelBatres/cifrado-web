@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cifrado Cesar y Atbash</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h2>Cifrado César / Atbash</h2>
+
+    <textarea id="texto" placeholder="Escribe el texto"></textarea>
+
+    <select id="modo">
+        <option value="cesar">Cifrado César</option>
+        <option value="atbash">Atbash</option>
+    </select>
+
+    <div id="cesar_desp">
+        <input type="number" id="desp" placeholder="Desplazamiento" value="3">
+    </div>
+
+    <input
+        type="text"
+        id="alfabeto"
+        value="abcdefghijklmnopqrstuvwxyz"
+        placeholder="Alfabeto"
+    >
+
+    <div style="display:flex; justify-content:space-between;">
+        <button onclick="cifrar()">Cifrar</button>
+        <button onclick="descifrar()">Descifrar</button>
+    </div>
+
+    <div id="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
