@@ -14,7 +14,7 @@ body {
     padding: 60px;
     border-radius: 12px;
 
-    width: 800px;   /* ← MUCHO MÁS ANCHO */
+    width: 800px;  
     max-width: 90vw;
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
