@@ -8,34 +8,70 @@
 </head>
 <body>
 
-<div class="container">
+<div class="main">
 
-    <h2>Cifrado César / Atbash</h2>
+    <div class="container">
 
-    <textarea id="texto" placeholder="Escribe el texto"></textarea>
+        <h2>Cifrado César / Atbash</h2>
 
-    <select id="modo">
-        <option value="cesar">Cifrado César</option>
-        <option value="atbash">Atbash</option>
-    </select>
+        <textarea id="texto" placeholder="Escribe el texto"></textarea>
 
-    <div id="cesar_desp">
-        <input type="number" id="desp" placeholder="Desplazamiento" value="3">
+        <select id="modo">
+            <option value="cesar">Cifrado César</option>
+            <option value="atbash">Atbash</option>
+        </select>
+
+        <div id="cesar_desp">
+            <input type="number" id="desp" placeholder="Desplazamiento" value="3">
+        </div>
+
+        <input
+            type="text"
+            id="alfabeto"
+            value="abcdefghijklmnopqrstuvwxyz"
+            placeholder="Alfabeto"
+        >
+
+        <div style="display:flex; justify-content:space-between;">
+            <button onclick="cifrar()">Cifrar</button>
+            <button onclick="descifrar()">Descifrar</button>
+        </div>
+
+        <div id="resultado"></div>
+
     </div>
 
-    <input
-        type="text"
-        id="alfabeto"
-        value="abcdefghijklmnopqrstuvwxyz"
-        placeholder="Alfabeto"
-    >
 
-    <div style="display:flex; justify-content:space-between;">
-        <button onclick="cifrar()">Cifrar</button>
-        <button onclick="descifrar()">Descifrar</button>
+    <div class="container">
+
+    <h2>Análisis de frecuencia</h2>
+
+    <button onclick="analizarFrecuencia()">
+        Aplicar análisis
+    </button>
+
+    <div class="tabs">
+
+        <button onclick="ordenarPorDesp()">
+            Ordenar por desp
+        </button>
+
+        <button onclick="ordenarPorScore()">
+            Ordenar por score
+        </button>
+
     </div>
 
-    <div id="resultado"></div>
+    <h3>Posibles soluciones</h3>
+
+    <ul id="listaSoluciones">
+    </ul>
+
+    <h3>Mejor solución</h3>
+
+    <div id="mejorSolucion"></div>
+
+</div>
 
 </div>
 
